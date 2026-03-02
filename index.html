@@ -2,23 +2,23 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>謎解き：特殊文字の試練</title>
+    <title>作人異言語謎</title>
 </head>
 <body>
-    <h2>古代の文字を入力せよ</h2>
+    <h2>解答を入力してください</h2>
     <input type="text" id="answerInput" placeholder="記号を入力">
-    <button onclick="checkAnswer()">石板をはめ込む</button>
+    <button onclick="checkAnswer()">解答</button>
 
     <script>
     function checkAnswer() {
         const input = document.getElementById('answerInput').value.trim();
         const encodedCorrect = "JUUyJUI1JTg0JUM3JTgxJUYwJTlGJTlEJUFGJUUxJUIxJUI1"; 
         if (btoa(encodeURIComponent(input)) === encodedCorrect) {
-            alert("扉が開いた！");
+            alert("正解！");
             window.location.href = "clear-room.html"; 
         } else {
-            alert("何も起きない。文字が違うようだ。");
-            // デバッグ用（あとで消してOK）：今の入力がどう判定されているかコンソールに出す
+            alert("解答が間違っています。");
+            // デバッグ用：今の入力がどう判定されているかコンソールに出す
             console.log("あなたの入力の暗号化値:", btoa(encodeURIComponent(input)));
         }
     }
@@ -28,4 +28,5 @@
 </body>
 
 </html>
+
 
