@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>私のホームページ</title>
+</head>
+<body>
+    <h1>こんにちは！</h1>
+    <h2>古代の文字を入力せよ</h2>
+<input type="text" id="answerInput" placeholder="記号を入力">
+<button onclick="checkAnswer()">石板をはめ込む</button>
+
+<script>
+function checkAnswer() {
+    const input = document.getElementById('answerInput').value.trim();
+    const encodedCorrect = "4paR4peI4p2v4pS0"; 
+    if (btoa(unescape(encodeURIComponent(input))) === encodedCorrect) {
+        alert("扉が開いた！");
+        window.location.href = "clear-room.html"; 
+    } else {
+        alert("何も起きない。文字が違うようだ。");
+    }
+}
+</script>
+</body>
+</html>
