@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>私のホームページ</title>
-</head>
-<body>
-    <h1>こんにちは！</h1>
-    <!DOCTYPE html>
-<html lang="ja">
-<head>
     <meta charset="UTF-8">
     <title>謎解き：特殊文字の試練</title>
 </head>
@@ -18,14 +11,8 @@
 
     <script>
     function checkAnswer() {
-        // 入力された文字を取得（前後の空白を削除）
         const input = document.getElementById('answerInput').value.trim();
-        
-        // 【重要】あなたの環境で「ⵄǁ🝯ᱵ」を暗号化した値に書き換えます
-        // 下の手順で確認した値をここに貼り付けてください
-        const encodedCorrect = "4pS04paR4peI4p2v"; 
-
-        // 比較処理
+        const encodedCorrect = "JUUyJUI1JTg0JUM3JTgxJUYwJTlGJTlEJUFGJUUxJUIxJUI1"; 
         if (btoa(encodeURIComponent(input)) === encodedCorrect) {
             alert("扉が開いた！");
             window.location.href = "clear-room.html"; 
@@ -41,3 +28,4 @@
 </body>
 
 </html>
+
